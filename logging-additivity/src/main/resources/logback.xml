@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<property name="LOG_HOME" value="logs" />
+
+	<appender name="EMPLOYEE" class="ch.qos.logback.core.FileAppender">
+		<file>${LOG_HOME}/employee.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%-5level %logger{36} - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="DIRECTOR" class="ch.qos.logback.core.FileAppender">
+		<file>${LOG_HOME}/director.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%-5level %logger{36} - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="MANAGER" class="ch.qos.logback.core.FileAppender">
+		<file>${LOG_HOME}/manager.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%-5level %logger{36} - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="ENGINEER" class="ch.qos.logback.core.FileAppender">
+		<file>${LOG_HOME}/engineer.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%-5level %logger{36} - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="INTERN" class="ch.qos.logback.core.FileAppender">
+		<file>${LOG_HOME}/intern.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%-5level %logger{36} - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%-5level %logger{36} - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+
+	<root level="ERROR">
+		<appender-ref ref="EMPLOYEE" />
+		<appender-ref ref="STDOUT" />
+	</root>
+
+	<logger name="employee.director" level="WARN">
+		<appender-ref ref="DIRECTOR" />
+	</logger>
+
+	<logger name="employee.director.manager" level="INFO"
+		additivity="false">
+		<appender-ref ref="MANAGER" />
+	</logger>
+
+	<logger name="employee.director.manager.engineer" level="DEBUG">
+		<appender-ref ref="ENGINEER" />
+	</logger>
+
+	<logger name="employee.director.manager.engineer.intern" level="TRACE"
+		additivity="false">
+		<appender-ref ref="INTERN" />
+	</logger>
+
+</configuration>

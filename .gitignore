@@ -1,0 +1,10 @@
+**/.project
+**/.settings/
+**/target
+**/.metadata
+**/.classpath
+
+**/.DS_Store
+**/.Trashes
+
+**/META-INF/

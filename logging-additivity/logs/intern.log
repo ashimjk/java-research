@@ -1,0 +1,6 @@
+INFO  e.director.manager.engineer.intern - Intern : Aadarsha
+ERROR e.director.manager.engineer.intern - Intern ERROR
+WARN  e.director.manager.engineer.intern - Intern WARN
+INFO  e.director.manager.engineer.intern - Intern INFO
+DEBUG e.director.manager.engineer.intern - Intern DEBUG
+TRACE e.director.manager.engineer.intern - Intern TRACE
