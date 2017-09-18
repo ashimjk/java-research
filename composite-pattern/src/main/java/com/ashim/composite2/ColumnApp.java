@@ -20,6 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 public class ColumnApp {
 
+	private static final int LEVEL_POSITION = 1;
 	private static final ObjectMapper mapper = new ObjectMapper();
 
 	/**
@@ -30,7 +31,9 @@ public class ColumnApp {
 	 */
 	public static void main(String... args) throws Exception {
 
-		List<Column> columns = getColumns();
+		List<Column> columns = getColumns(true);
+		System.out.println();
+		System.out.println("All Column List");
 		System.out.println(mapper.writeValueAsString(columns));
 
 	}
@@ -38,12 +41,14 @@ public class ColumnApp {
 	/**
 	 * Construct Column List with its parent-child relation
 	 *
+	 * @param isPrintLevelMap
+	 *            to print level wise column list
 	 * @return list of column with hierarchy
 	 *
 	 * @throws Exception
 	 *             when node level doesn't match its parent node
 	 */
-	private static List<Column> getColumns() throws Exception {
+	private static List<Column> getColumns(boolean isPrintLevelMap) throws Exception {
 		// Initialize Node with its child
 		Node node = getNode();
 
@@ -53,10 +58,15 @@ public class ColumnApp {
 
 		// Initialize map for a root level
 		Map<Integer, List<Column>> maps = new HashMap<>();
-		maps.put(0, columns);
+		maps.put(LEVEL_POSITION, columns);
 
-		maps = constructColumnLevels(maps, node, 0);
+		maps = constructColumnLevels(maps, node, LEVEL_POSITION);
 		columns = new ArrayList<>();
+
+		if (isPrintLevelMap) {
+			System.out.println("Level Wise Column List");
+			System.out.println(mapper.writeValueAsString(maps));
+		}
 
 		for (Map.Entry<Integer, List<Column>> map : maps.entrySet()) {
 			for (Column col : map.getValue()) {
