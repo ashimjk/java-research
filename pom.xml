@@ -9,10 +9,10 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>course-api</module>
-		<module>excel-ex</module>
-		<module>logging-additivity</module>
-		<module>multi-module</module>
-		<module>composite-pattern</module>
+		<module>apache-poi</module>
+		<module>design-pattern</module>
+		<module>logging</module>
+		<module>reactive</module>
+		<module>spring-ex</module>
 	</modules>
 </project>
