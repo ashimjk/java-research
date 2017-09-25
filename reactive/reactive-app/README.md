@@ -1,3 +1,5 @@
 # reactive-app
 
-- App implements the real-time stock service provided by Yahoo.
+- Implemented Using
+	- RxJava - https://github.com/ReactiveX/RxJava
+	- YahooFinance API - http://financequotes-api.com/
