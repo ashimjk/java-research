@@ -10,5 +10,6 @@
 
 	<modules>
 		<module>security-basic</module>
+		<module>security-db</module>
 	</modules>
 </project>
