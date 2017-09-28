@@ -1,10 +1,22 @@
-**/.project
-**/.settings/
 **/target
 **/.metadata
-**/.classpath
+**/.mvn
 
 **/.DS_Store
 **/.Trashes
 
 **/META-INF/
+
+### STS ###
+**/.apt_generated
+**/.classpath
+**/.factorypath
+**/.project
+**/.settings
+**/.springBeans
+
+### IntelliJ IDEA ###
+**/.idea
+**/*.iws
+**/*.iml
+**/*.ipr
