@@ -8,5 +8,6 @@ public class ExcelConstant {
 	public static final String EXCEL_RESIZE = RESOURCES_FOLDER + "/ExcelResize.xls";
 	public static final String EXCEL_MERGE = RESOURCES_FOLDER + "/ExcelMerge.xls";
 	public static final String READ_EXCEL = RESOURCES_FOLDER + "/ReadExcel.xls";
+	public static final String DATA_FORMAT = RESOURCES_FOLDER + "/DataFormat.xls";
 
 }
