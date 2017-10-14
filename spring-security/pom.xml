@@ -11,5 +11,6 @@
 	<modules>
 		<module>security-basic</module>
 		<module>security-db</module>
+		<module>ssl-example</module>
 	</modules>
 </project>
