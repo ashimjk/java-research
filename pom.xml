@@ -14,5 +14,6 @@
 		<module>logging</module>
 		<module>reactive</module>
 		<module>spring-ex</module>
+		<module>java8example</module>
 	</modules>
 </project>

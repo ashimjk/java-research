@@ -5,3 +5,5 @@
 - Rest api with JPA (H2 Database) and API testing
 - Composite Design Pattern with simple and complex implementation
 - Apache POI - Excel Example
+- Java 8 Implementation
+	- Optional Example
