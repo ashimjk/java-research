@@ -12,5 +12,6 @@ class SecuredServerController{
     public String secured(){
         System.out.println("Inside secured()");
         return "Hello user !!! : " + new Date();
+//        return "Welcome to SSL Demo";
     }
 }
